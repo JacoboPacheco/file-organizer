@@ -26,11 +26,10 @@ for i in os.listdir(folder_path):
         else:
             category = "other"
 
-    destination_folder = os.path.join(folder_path, category)
+        destination_folder = os.path.join(folder_path, category)
 
-    if not os.path.exists(destination_folder):
-        os.mkdir(destination_folder)
-    
-    destination_path = os.path.join(destination_folder, i)
+        if not os.path.exists(destination_folder):
+            os.mkdir(destination_folder)
 
-    shutil.move(full_path, destination_path)
+        destination_path = os.path.join(destination_folder, i)
+        shutil.move(full_path, destination_path)
